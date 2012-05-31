@@ -1,0 +1,160 @@
+tom steam ripper
+by altr.Thaatz
+CHANGELOG
+
+TODO
+[ ]add ability to configure revemu
+[x]replace game folders in bin (goldsrc, source3, source4, etc...) with generic revemu folder that is configured in the script
+[x]add l4d and l4d2 support
+[x]simplify rev.ini file (remove comments)
+[x]implement addon packs (like bots and stuff)
+[x]add ability to rip non-valve games
+[ ]automatically configure for custom non-valve games
+[-]add l4d and l4d2 addon-support
+	-temporarily added the .ncf files for addon support as optional ncfs to extract in l4d and l4d2 app configuration files (bin\apps)
+
+[x]update l4d and l4d2 support to use revolution emulator
+[-]add ability to increase base process priority
+	*deemed useless (it is instead optimised by processor architechture)
+[ ]add option to allow use of steam overlay with extracted games
+
+[ ]change bots for cs 1.6 to rip directly from cs:cz or use z-bots or podbots
+[ ]add ability to use custom gamefixes
+
+KEY
+-denotes a change (neutral change or positive change)
+*denotes a negative change (ie. bug or something taken out)
+
+release information denoted in brackets [] will usually indicate stability.
+[STABLE]=tested and mostly stable (although not guarantee)
+[DEV]=development build, usually has newly added features or changes that are untested
+[UNSTABLE]=bleeding edge build that is very buggy or not tested
+
+0.26 alpha 4 [DEV]
+-added a new option to autodetect game files for non valve games
+-added l4d and l4d2 addon-support
+-updated rev emu to RevCrew_win_9.85_18022012
+	*rev-crew site is down, so revloader has not been updated
+-added a check to see if steam was running and warned the user if it was found running
+-updated readme.txt
+
+
+0.26 alpha 3 [DEV]
+-source engine updates have rendered the past versions out of date and for the time being all releases are [DEV] for source games
+-revapps and game configurations have been updated (for engine updates) (css and tf2)
+-fixed hl2e1 and hl2e2 configs (wrong names)
+-added hl2: lost coast and day of defeat: source (because they were missing)
+-added portal 2 (beta extract, new engine makes current steam emulation useless)
+-added hotfix pause for renameing (rare case when extracted files would not rename)
+-bug fixes when reading from settings.ini
+
+0.26 alpha 2 [STABLE]
+-added check to see if settings.ini was pointing to a valid steam directory before coninuing.
+-changed changelog criteria to include tags on version numbers
+-main menu will now show which version you are running (x86 or x64)
+
+0.26 alpha 1 [DEV]
+-updated revolution emulator to RevCrew_win_9.85_28082011-1
+-updated to 7zip 9.20
+-updated to hllib 2.4.2
+-added 64-bit support (script will auto detect processor type)
+-the status of tf2 rips is unknown (requires additional patching that i was too lazy to do), although tf2 rips are probably obsolete now b/c tf2 is free
+-updated readme
+*high priority development has been paused (high priority script will not work in current release, script is there for development purposes only)
+
+0.25 beta 4 [DEV]
+-added option for "high" base priority for HLExtract.exe
+
+0.25 beta 3 [STABLE]
+-fixed a bug in the read settings (undefined set command)
+
+0.25 beta 2 [DEVELOPMENT]
+-updated version numbers
+-added batch files to launch extracted games
+-removed l4d and l4d2 cracked executables and instead l4d and l4d2 steam executables will be extracted and then cracked using revemu and revloader
+-updated revemu (update RevCrew_win_27112010) (l4d fixes and new tf2 items)
+-fixed addons configuration
+-updated readme
+
+0.25 beta 1 [DEVELOPMENT]
+-removed the %ncf% variable and unified variables to use steamapps directory and route from there
+-changed variable names in the script to prevent errors with selection (introduced variable %exs%)
+-added CSS model pack for CS 1.6 (addon)
+-changed credits from ArL.Thaatz to altr.thaatz
+-integrated addon packs have been removed and will now instead be available as separate addon downloads and the script will now call upon a separate addon configuration to ensure expandability
+-updated readme
+
+0.21 beta 5 [STABLE]
+-updated readme
+-changed default variable paths to C: drive
+-added 1 second wait after renaming root to %sel% to make sure that proper time was given to change folder name before emu files were written
+-added optional bot pack for cs 1.6
+-added 7zip to extract addon packs
+
+0.21 beta 4
+-updated css.ini
+
+0.21 beta 3
+-fixed first echo off command (so error messages look better)
+
+0.21 beta 2
+-fixed bug with variable ncu when renaming
+-added revloader for non-valve games (so it can be more universal)
+-added LGPL for license
+
+0.21 beta 1
+-edited readme more
+-fixed potential bug with backups folder
+
+0.2 alpha 9
+-simplified script
+-changed ini files to contain steam appids and removed variables GCFx (where x is a number)
+-fixed bug with deliminators when reading from custom.ini
+
+0.2 alpha 8
+-added ability to rip non-valve steam games [BETA]
+-changed settings.conf to settings.ini for easier editing (native windows editing)
+-updated README
+
+0.2 alpha 7
+-added l4d and l4d2 support
+-added creation of steam_appid.txt
+
+0.2 alpha 6
+-fixed bug in windows vista and windows 7
+-edited error messages
+-tf2 items work
+
+0.2 alpha 5
+-changed logo
+-changed titles
+-simplified rev.ini
+-removed goldsrc, source, and tf2 folders.  Is now replaced by a single revemu folder.  The script will handle the locations of the libraries when ripping a game (steamclient.dll in bin folder for source games)
+-edited menu to give options of either goldsrc or source
+-added all goldsrc games
+
+0.2 alpha 4
+-added check to see if gcf files were present
+-fixed extraction of goldsrc based games (proper extraction of platform.gcf)
+-removed source3 and source4 revemu builds and replaced it with a universal source build
+*tf items dont work (because of new 119 update)
+
+0.2 alpha 3
+-fixed order of gcf extraction
+
+0.2 alpha 2
+-updated revemu to 9.8.3-nologging
+-took revapps.ini from revemu 9.8.1 rc4 to make ini files that identify gcfs
+-simplified script
+-removed color for less confusion when extracting files with hllib
+-added automated copy emu files
+
+0.2 alpha 1
+-added support for l4d and l4d2
+-bug fixes
+-tweaked config file
+
+0.1
+-initial relase
+-simple batch front end that uses hllib and revemu to rip games from steam
+-only rips valve games (source, goldsrc, and source 2007)
