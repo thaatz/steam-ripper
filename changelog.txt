@@ -9,7 +9,7 @@ TODO
 [x]simplify rev.ini file (remove comments)
 [x]implement addon packs (like bots and stuff)
 [x]add ability to rip non-valve games
-[ ]automatically configure for custom non-valve games
+[-]automatically configure for custom non-valve games [beta]
 [-]add l4d and l4d2 addon-support
 	-temporarily added the .ncf files for addon support as optional ncfs to extract in l4d and l4d2 app configuration files (bin\apps)
 
@@ -30,6 +30,11 @@ release information denoted in brackets [] will usually indicate stability.
 [DEV]=development build, usually has newly added features or changes that are untested
 [UNSTABLE]=bleeding edge build that is very buggy or not tested
 
+0.26 alpha 5 [DEV] [6.31.12]
+-updated rev emu to win_30.05.2012
+-updated readme.txt
+-made slight changes to error messages
+
 0.26 alpha 4 [DEV]
 -added a new option to autodetect game files for non valve games
 -added l4d and l4d2 addon-support
@@ -37,7 +42,6 @@ release information denoted in brackets [] will usually indicate stability.
 	*rev-crew site is down, so revloader has not been updated
 -added a check to see if steam was running and warned the user if it was found running
 -updated readme.txt
-
 
 0.26 alpha 3 [DEV]
 -source engine updates have rendered the past versions out of date and for the time being all releases are [DEV] for source games

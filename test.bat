@@ -199,8 +199,10 @@ REM echo filler>>index.tmp
 REM echo filler>>index.tmp
 dir "%cache%" /b /a-d | find /i "%ncu%">index.tmp
 if "%errorlevel%"=="1" (
+	echo.
+	echo !!!ERROR!!!
 	echo index cache files for game "%ncu%" were not found
-	echo try aquiring the .ncf files from CF Toolbox
+	echo try aquiring the .ncf files from CF Toolbox and/or configuring custom.ini manually
 	pause
 	exit
 	)
